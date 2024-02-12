@@ -1,0 +1,303 @@
+/* Import google Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Remove browser default styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+.bold{
+    font-weight: 500;
+}
+/* remove all line style */
+li{
+    list-style: none;
+}
+
+/* Dashboard layout */
+.grid-main-container{
+    height: 100vh;
+
+    /* Dashboard layout */
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 150px 1fr;
+}
+
+.sidebar{
+    background-color: #3b82f6;
+    /* Dashboard layout */
+    grid-row: 1 / span 2;
+
+
+    /* inside sidebar grid to display three content separeted */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 300px 1fr;
+    gap: 20px;
+}
+
+.header{
+    background-color: #ffffff;
+    /* Dashboard layout */
+    grid-column: 2/ span 1;
+
+
+    /* set grid for separate search bar and upload button*/
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+.main-container{
+    background-color: #e5e7eb;
+    /* Dashboard layout */
+    grid-column: 2/ span 1;
+    grid-row: 2/ span 1;
+
+    /* margin: 1rem; */
+    padding: .8rem;
+
+    /* Main Container grid to divide projects and announcements */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap:20px;
+}
+
+.projects{
+    /* Dashboard layout */
+    grid-column: 1 / span 2;
+
+}
+.aside{
+    /* Dashboard layout */
+    grid-column: 3 /span 1;
+
+}
+
+
+/* -------- Sideabr Style --------- */
+/* set margin to all sidebar icons */
+.icons{
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-right: .8rem;
+}
+
+/* set padding to all icon-group */
+.icon-group{
+    margin-bottom: 1rem;
+    color: #FFF;
+    font-weight: 600;
+    letter-spacing: .7px;
+    /* font-size: 1rem; */
+
+    /* center the group icon and text */
+    display: flex;
+    align-items: center;
+}
+
+/* Dashboard Heading Text Style */
+.dashboadHeading{
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: .7px;
+
+    /* center the dashboard icon and text */
+    display: flex;
+    align-items: center;
+}
+.dashboard-icon{
+    font-size: 2.5rem;
+}
+
+
+/* -------- Header grid ----------- */
+.search-notification{
+    grid-row: 1 / span 1;
+}
+
+.name-buttons{
+    grid-row: 2 / span 1;
+}
+
+/* style search bar */
+.search{
+    display: grid;
+    grid-template-columns: 20px 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.search .search-icon{
+    font-size: 2rem;
+}
+
+.search input{
+    border-radius: 25px;
+    outline: none;
+    border: #000 1px solid;
+    background-color: #e5e7eb;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.search .notification{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 15px;
+}
+
+/* profile picture image size for the first row of the header*/
+.search .notification img{
+    width: 50px;
+    height: 50px;
+}
+
+/* Set grid columns to the header second row. */
+.name-buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+/* center profile picture, message and user name*/
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+/* profile picture img size for second row of header*/
+.name-buttons .profile img{
+    width: 75px;
+    height: 75px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: end;
+}
+
+/* Style header buttons */
+.buttons button{
+    margin-left: .5rem;
+    background-color: #3b82f6;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: .4rem .8rem;
+    border: #3b82f6 solid 1px;
+    border-radius: 15px;
+}
+
+/* --------- Project Container ---------- */
+/* set grid row 2. The first row is for the project heading, and the second row is for the project content. */
+.projects{
+    display: grid;
+    grid-template-rows: 35px 1fr;
+}
+
+
+/* Project, Announcement and Trending Heading */
+.project-heading, .announcement-heading, .trending-heading{
+    grid-row: 1 / span 1;
+    align-self: center;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Project Content */
+.project-container{
+    grid-row: 2/ span 1;
+    
+    /* Grid for project cards*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px
+}
+
+
+/* Project card style */
+.project-card{
+    background-color: #FFF;
+    padding: 1rem;
+    border-left: 5px #3b82f6 solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* set margin top 10px for all project card children. */
+.project-card > *{
+    margin-bottom: 10px;
+}
+
+/* Push the bottom right corner of the card.*/
+.project-icons{
+    display: flex;
+    align-self: end;
+    margin-top: auto;
+    gap: 5px;
+}
+
+
+/* ------- Aside (Announcement  & Trending)-------- */
+/* Set grid row for Aside section */
+.aside{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Announcement */
+.announcements, .trending{
+    display: grid;
+    grid-template-rows: 35px 1fr;
+}
+
+.announcement-container{
+    grid-row: 2/ span 1;
+
+    background-color: #FFF;
+    height: 100%;
+    padding: 1rem 1.5rem 0 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0;
+}
+
+.announcement-section{
+    margin: .3rem auto;
+}
+
+/* Trending */
+.trending-container{
+    background-color: #FFF;
+    height: 100%;
+    padding: 1rem 1.5rem 0 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+/* Define user image height and width */
+.user img{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
